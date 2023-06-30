@@ -1,4 +1,23 @@
-
+const names = [
+  "Cammy",
+  "Lily",
+  "Zangief",
+  "JP",
+  "Dee_Jay",
+  "Blanka",
+  "E.Honda",
+  "Juri",
+  "Ken",
+  "Ryu",
+  "Kimberly",
+  "Luke",
+  "Chun-Li",
+  "Guile",
+  "Marisa",
+  "Manon",
+  "Dhalsim",
+  "Jamie",
+];
 
 const possibleInputs: string[] = [
     "PPPKKK",
@@ -16,6 +35,7 @@ const possibleInputs: string[] = [
     "214PP~6P",
     "236PPOD",
     "236LP~6PLP",
+    "5MP~LK~HK",
     "236LP~6P~6PLP",
     "236MP~6K~6KMP",
     "236HP~6K~6KHP",
@@ -117,5 +137,5 @@ const column = [
       },
 ];
 
-const settings = {possibleInputs, column};
+const settings = {possibleInputs, column, names};
 export default settings;
