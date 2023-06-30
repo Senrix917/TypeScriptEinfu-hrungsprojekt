@@ -1,4 +1,4 @@
-#TypeScript Einführung
+#TypeScript Einführung\n
 ###Mein Typescript Programm ist eine Webscraper Anwendung für Framedata.
 
 Ziel der Anwendung, ist es über den Server die HTML Elemente von https://wiki.supercombo.gg/w/Street_Fighter_6 + Charaktername zu lesen und an den Client zu senden.
