@@ -4,11 +4,10 @@
 Ziel der Anwendung, ist es über den Server die HTML Elemente von https://wiki.supercombo.gg/w/Street_Fighter_6 + [Charaktername] zu lesen und an den Client zu senden.
 Der Client Server formatiert diese Elemente dann und gibt sie an den Browser zurück.
 
+Für mich war es nötig den Server und Client zu seperieren und einzeln in einer IDE zu installieren und starten
+
 um den Server zu starten:  
-**npm install**  
-**npm install puppeteer**  
-**npm install express**  
-**npm install axios**  
+**npm install**   
 **node server.ts**  
 Der Server sollte nun auf LocalHost:3009 laufen
 
