@@ -145,8 +145,10 @@ export function splitName(name: string): string[] {
       name.includes(input) &&
       (name.includes("Stand") ||
         name.includes("Crouch") ||
-        name.includes("Jump")) &&
-      name.includes("DL")
+        name.includes("Jump")) &&(
+      name.includes("DL") ||(name.includes("Stand " + input) ||
+      name.includes("Crouch " + input) ||
+      name.includes("Jump " + input)))
     ) {
       const parts = name.split(input);
       nameArray.push(parts[0] + input);
