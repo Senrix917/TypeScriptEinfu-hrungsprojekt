@@ -21,3 +21,7 @@ Wenn nun hoffentlich beide Server laufen kann man auf LocalHost:3000 gehen um in
 
 Hier eine Liste mit den einzelnen Namen: 
 **Cammy, Lily, Zangief, JP, Dee_Jay, Blanka, E.Honda, Juri, Ken, Ryu, Kimberly, Luke, Chun-Li, Guile, Marisa, Manon, Dhalsim, Jamie,**
+
+Zum Testen in dem Client Pojekt den Command
+**npm run test**  
+benutzen um die Tests zu durchlaufen
