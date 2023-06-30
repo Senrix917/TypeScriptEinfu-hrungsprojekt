@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import CharacterData from "./webScraper";
+import WebScraper from "./webScraper";
 import { Button, Space, Input, Typography } from "antd";
 
 function App(): JSX.Element {
@@ -10,10 +10,6 @@ function App(): JSX.Element {
   
 
   const {Title} = Typography
-
-  function refreshPage() {
-    window.location.reload();
-  }
 
   const handleClick = (): void => {
     // Pass the inputValue to the CharacterData component or perform any other action
@@ -42,11 +38,9 @@ function App(): JSX.Element {
       <Button type="primary" onClick={handleClick}>Submit</Button>
     </Space.Compact>
 
-      {showCharacterData && <CharacterData parameter={parameter} />}
+      {showCharacterData && <WebScraper parameter={parameter} />}
 
-      <Button type="primary" onClick={refreshPage}>
-        Click to reload!
-      </Button>
+
     </div>
   );
 }
