@@ -9,6 +9,6 @@ describe("name recognition tests", () =>{
     test("recognize name with long string", () =>{
         let string: string = "ininafuzngseuanugnpgunrughgzagvgzbabvzraubnuzhrabzbvzabzvb";
         
-        expect(() => nameRecognition(string)).toThrow("Could not find " + string);   
+        expect(() => nameRecognition(string)).toThrow("Please enter a name");   
     })
 })
