@@ -12,14 +12,13 @@ function throwNameNotFoundError(name: string): never {
   throw new NameNotFoundError(name);
 }
 
-const CharacterData: React.FC<CharacterDataProps> = ({ parameter }) => {
+const WebScraper: React.FC<CharacterDataProps> = ({ parameter }) => {
   const [data, setData] = useState<any>(null);
   const [error, setError] = useState<any>(null);
   const [formatedName, setFormatedName] = useState<{
     name: string;
     distance: number;
   }>({ name: "", distance: 0 });
-  const name = parameter;
   let characterValues: CharacterValueTypes[];
 
 
@@ -33,15 +32,15 @@ const CharacterData: React.FC<CharacterDataProps> = ({ parameter }) => {
      * const to format the name that was inputted so that it can be found in the URL by the Web Scraper
      * and if the distance is greater than 3 it is not acknowledged
      */
-    const newFormatedName = nameRecognition(parameter);
-    setFormatedName(newFormatedName);
+  try{
+    const temp = nameRecognition(parameter);
+    setFormatedName(temp);
     setError(null);
-
-    if (newFormatedName.distance <= 3 && name !== "") {
+    if (temp.distance <= 3 && parameter !== "") {
       const fetchData = async () => {
         try {
           const response = await axios.get(
-            "http://localhost:3009/api/framedata?name=" + newFormatedName.name
+            "http://localhost:3009/api/framedata?name=" + temp.name
           );
           setData(response.data);
         } catch (error) {
@@ -57,9 +56,16 @@ const CharacterData: React.FC<CharacterDataProps> = ({ parameter }) => {
         setError(error);
       }
     } // eslint-disable-next-line
+  }catch(error){
+      setError(error)
+    }
   }, [parameter]);
 
+
+  console.log(data)
+  //creates characterValues that get rendered in App.tsx
   characterValues = createCharacterValue(data);
+  console.log(characterValues)
   return (
     <div>
       {error ? (
@@ -81,7 +87,7 @@ const CharacterData: React.FC<CharacterDataProps> = ({ parameter }) => {
     </div>
   );
 };
-export default CharacterData;
+export default WebScraper;
 
 /* characterValues.sort((a, b) => {
     if (a.OnBlock !== "-" && b.OnBlock !== "-") {
