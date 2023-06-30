@@ -4,7 +4,7 @@ Mein Typescript Programm ist eine Webscraper Anwendung für Framedata.
 Ziel der Anwendung, ist es über den Server die HTML Elemente von https://wiki.supercombo.gg/w/Street_Fighter_6 + Charaktername zu lesen und an den Client zu senden.
 Der Client Server formatiert diese Elemente dann und gibt sie an den Browser zurück.
 
-um den Server zu starten:
+um den Server zu starten:  
 **npm install**  
 **npm install puppeteer**  
 **npm install express**  
