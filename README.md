@@ -12,7 +12,7 @@ um den Server zu starten:
 **node server.ts**  
 Der Server sollte nun auf LocalHost:3009 laufen
 
-um den Client zu starten:
+um den Client zu starten:  
 **npm install**  
 **npm start**  
 
