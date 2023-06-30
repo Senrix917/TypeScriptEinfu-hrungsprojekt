@@ -1,8 +1,9 @@
+import MoveFormattingError from "../Errors/MoveFormattingerror";
 import { CharacterValueTypes } from "../Interfaces/CharacterValueTypes";
 import settings from "../Settings/settings";
 
 //exported function that is called in the WebScraper.ts to create the characterValues
-export function createCharacterValue(data: any): CharacterValueTypes[] {
+export function createCharacterValue(data: string[]): CharacterValueTypes[] {
   try {
     let increment: number = 0
     const characterValues: CharacterValueTypes[] = [];
@@ -62,8 +63,7 @@ export function createValues(
         input = nameInput[0];
       }
     } catch {
-      console.log(dataset);
-      console.log("nameinput: " + nameInput);
+      throw new MoveFormattingError(data)
     }
     const name = nameInput[1];
 
