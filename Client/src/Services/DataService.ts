@@ -185,9 +185,9 @@ export function createDatasets(textData: string[]): string[][] {
       i === 0 &&
       textData[bottom].includes("DL2") &&
       //if it does not include any input
-      !settings.possibleInputs.some(
+      !settings.possibleInputs.some(//eslint-disable-next-line
         (
-          input // eslint-disable-next-line
+          input
         ) =>
           textData[bottom].includes(input) && textData[bottom + 2] === "Startup"
       )
