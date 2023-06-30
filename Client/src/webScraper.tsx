@@ -61,11 +61,8 @@ const WebScraper: React.FC<CharacterDataProps> = ({ parameter }) => {
     }
   }, [parameter]);
 
-
-  console.log(data)
   //creates characterValues that get rendered in App.tsx
   characterValues = createCharacterValue(data);
-  console.log(characterValues)
   return (
     <div>
       {error ? (
@@ -89,14 +86,5 @@ const WebScraper: React.FC<CharacterDataProps> = ({ parameter }) => {
 };
 export default WebScraper;
 
-/* characterValues.sort((a, b) => {
-    if (a.OnBlock !== "-" && b.OnBlock !== "-") {
-      return parseInt(a.OnBlock) > parseInt(b.OnBlock) ? -1 : 1;
-    } else if (a.OnBlock !== "-" && b.OnBlock === "-") {
-      return -1;
-    } else if (a.OnBlock === "-" && b.OnBlock !== "-") {
-      return 1;
-    } else {
-      return 1;
     }
   });*/
